@@ -1,1 +1,5 @@
 # Proyecto1_IntroduccionALaInteligenciaArtificial
+Definición del problema: El uso de videojuegos se ha incrementado significativamente en los últimos años, especialmente en población joven, generando en algunos casos patrones de uso problemático o adictivo. Diversos estudios sugieren que ciertos grupos neurodivergentes, como las personas dentro del Trastorno del Espectro Autista (TEA), podrían presentar una relación distinta con este tipo de estímulos digitales, debido a características como la preferencia por rutinas, intereses restringidos y alta focalización en actividades específicas.
+
+Sin embargo, aún no existe claridad sobre si estas características se asocian a una mayor severidad del uso problemático de videojuegos o si simplemente reflejan formas distintas de interacción con el entorno digital. Esto genera una brecha en la comprensión del fenómeno, especialmente en la identificación de factores conductuales y neurobiológicos que podrían influir en el desarrollo de patrones de uso excesivo.
+
