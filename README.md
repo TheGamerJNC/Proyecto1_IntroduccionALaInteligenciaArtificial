@@ -1,4 +1,4 @@
-# *Adicción a los Videojuegos en personas con TEA:* Factores desencadenantes, impacto funcional y repercusiones a largo plazo
+b# *Adicción a los Videojuegos en personas con TEA:* Factores desencadenantes, impacto funcional y repercusiones a largo plazo
 
 ***Definición del problema*** \
 \
@@ -22,3 +22,8 @@ El objetivo del presente estudio fue aplicar algoritmos de aprendizaje profundo 
 
 ***Modelos seleccionados*** \
 \
+*Random Forest* \
+Modelo principal de clasificación. Permite manejar relaciones no lineales entre variables, trabajar con datos mixtos y obtener la importancia de cada variable en la predicción.
+
+*K-Nearest Neighbors (KNN)* \
+Modelo basado en similitud entre observaciones. Permite identificar patrones de usuarios con comportamientos similares en términos de uso de videojuegos y rasgos asociados al TEA.
