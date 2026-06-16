@@ -27,3 +27,30 @@ Modelo principal de clasificación. Permite manejar relaciones no lineales entre
 
 *K-Nearest Neighbors (KNN)* \
 Modelo basado en similitud entre observaciones. Permite identificar patrones de usuarios con comportamientos similares en términos de uso de videojuegos y rasgos asociados al TEA.
+
+***Justifiación de los Modelos*** \
+\
+El problema planteado busca analizar la relación entre el uso problemático de videojuegos y los rasgos asociados al Trastorno del Espectro Autista (TEA), integrando además variables conductuales y de salud mental. Dado que el objetivo principal es clasificar perfiles de riesgo de uso problemático de videojuegos y comprender qué variables influyen en este comportamiento.
+
+*Random Forest* \
+Es el modelo mas adecuado para el problema, ya que permite manejar múltiples variables muy disntintas entre si, provenientes de los disntintos datasets (Conductuales, psicológicos y neurobiológicos).
+
+  Ventajas: 
+  - Captura relaciones no lineales complejas.
+  - Buen manejo de variables mixtas.
+  - Permite medir importancia de variables.
+
+  Limitaciones: 
+  - Puede ser computacionalmente mas costoso de trabajar.
+
+*K-Nearest Neighbors (KNN)* \
+\
+Permite identificar usuarios con comportamiento similares en términos de gaming y características psicológicas/neurobiológicas.
+
+  Ventajas:
+  - Simple y facil de interpretar conceptualmente.
+  - Útil para detectar agrupaciones naturales.
+
+  Limitaciones:
+  - Alto costo computacional en grandes datasets.
+  - Rendimiento depende fuertemente de la elección de K. 
