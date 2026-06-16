@@ -46,7 +46,6 @@ Pertinencia: Es el modelo mas adecuado para el problema, ya que permite manejar 
 Justificación: Es el modelo mas adecuadopara detectar patrones complejos entre uso de videojuegos, salud mental y ragos de TEA, que no necesariamente siguen relaciones lineales.
 
 *K-Nearest Neighbors (KNN)* \
-\
 Pertinencia: Permite identificar usuarios con comportamiento similares en términos de gaming y características psicológicas/neurobiológicas.
 
   Ventajas:
