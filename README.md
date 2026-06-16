@@ -33,7 +33,7 @@ Modelo basado en similitud entre observaciones. Permite identificar patrones de 
 El problema planteado busca analizar la relación entre el uso problemático de videojuegos y los rasgos asociados al Trastorno del Espectro Autista (TEA), integrando además variables conductuales y de salud mental. Dado que el objetivo principal es clasificar perfiles de riesgo de uso problemático de videojuegos y comprender qué variables influyen en este comportamiento.
 
 *Random Forest* \
-Es el modelo mas adecuado para el problema, ya que permite manejar múltiples variables muy disntintas entre si, provenientes de los disntintos datasets (Conductuales, psicológicos y neurobiológicos).
+Pertinencia: Es el modelo mas adecuado para el problema, ya que permite manejar múltiples variables muy disntintas entre si, provenientes de los disntintos datasets (Conductuales, psicológicos y neurobiológicos).
 
   Ventajas: 
   - Captura relaciones no lineales complejas.
@@ -43,9 +43,11 @@ Es el modelo mas adecuado para el problema, ya que permite manejar múltiples va
   Limitaciones: 
   - Puede ser computacionalmente mas costoso de trabajar.
 
+Justificación: Es el modelo mas adecuadopara detectar patrones complejos entre uso de videojuegos, salud mental y ragos de TEA, que no necesariamente siguen relaciones lineales.
+
 *K-Nearest Neighbors (KNN)* \
 \
-Permite identificar usuarios con comportamiento similares en términos de gaming y características psicológicas/neurobiológicas.
+Pertinencia: Permite identificar usuarios con comportamiento similares en términos de gaming y características psicológicas/neurobiológicas.
 
   Ventajas:
   - Simple y facil de interpretar conceptualmente.
@@ -53,4 +55,6 @@ Permite identificar usuarios con comportamiento similares en términos de gaming
 
   Limitaciones:
   - Alto costo computacional en grandes datasets.
-  - Rendimiento depende fuertemente de la elección de K. 
+  - Rendimiento depende fuertemente de la elección de K.
+
+Justificación: Es útil para explorar similitudes entre perfiles de usuarios, especialmente entre individuos con rasgos TEA y los que no presentan TEA.
