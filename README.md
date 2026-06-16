@@ -19,3 +19,6 @@ Este dataset se centra en la relación entre el uso de videojuegos y la salud me
 
 *Autism Spectrum Disorder Clasification (https://www.kaggle.com/competitions/abide)* \
 El objetivo del presente estudio fue aplicar algoritmos de aprendizaje profundo para identificar a pacientes con trastorno del espectro autista (TEA) a partir de un gran conjunto de datos de imágenes cerebrales, basándose únicamente en los patrones de activación cerebral de los pacientes. Investigamos datos de neuroimagen de pacientes con TEA de una base de datos mundial multisitio conocida como ABIDE (Intercambio de Datos de Imagen Cerebral Autista). El TEA es un trastorno cerebral caracterizado por déficits sociales y conductas repetitivas.
+
+***Modelos seleccionados*** \
+\
