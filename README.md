@@ -57,3 +57,21 @@ Pertinencia: Permite identificar usuarios con comportamientos similares en térm
   - Rendimiento depende fuertemente de la elección de K.
 
 Justificación: Es útil para explorar similitudes entre perfiles de usuarios, especialmente entre individuos con rasgos TEA y los que no presentan TEA.
+
+***Métricas Seleccionadas (y su Justificación)*** \
+\
+*Precision*
+- Lo que mide: El porcentaje de personas identificadas con adicción que realmente la padecen.
+- El por que es útil: Un falso positivo (clasificar erróneamente a alguien como adicto) puede generar alarmismo innecesario en las familias, estigmatizar el uso de los videojuegos (que a menudo son una vía legítima de socialización y descompresión para personas TEA) o activar intervenciones clínicas invasivas e injustificadas.
+
+*Recall*
+- Lo que mide: El porcentaje de personas con adicción real que el modelo logra detectar.
+- El por que es útil: En el contexto de la salud mental y el TEA, un falso negativo (no detectar a alguien que sufre adicción) significa dejar a una persona vulnerable sin intervención, apoyo terapéutico o adaptaciones. Es crucial mantener este valor alto si el objetivo es el tamizaje (screening).
+
+*F1-Score*
+- Lo que mide: La media armónica entre "Precision" y "Recall".
+- El por que es útil: Los datos sobre adicción en poblaciones específicas suelen estar muy desbalanceados (la mayoría de la muestra no cumplirá con los criterios clínicos de adicción). El F1-Score es la mejor métrica general para evaluar el rendimiento del modelo sin dejarse engañar por una alta precisión a costa de un recall bajo, o viceversa.
+
+*AUC-ROC (Área debajo de la curva ROC)*
+- Lo que mide: La capacidad del modelo para distinguir entre ambas clases a través de diferentes umbrales de decisión.
+- El por que es útil: Permite a los investigadores y clínicos ajustar el "umbral" del modelo según la estrategia. Por ejemplo, se puede bajar el umbral para ser más sensibles en una etapa de diagnóstico temprano, o subirlo para intervenciones costosas.
