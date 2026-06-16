@@ -35,12 +35,12 @@ El problema planteado busca analizar la relación entre el uso problemático de 
 *Random Forest* \
 Pertinencia: Es el modelo mas adecuado para el problema, ya que permite manejar múltiples variables muy disntintas entre si, provenientes de los disntintos datasets (Conductuales, psicológicos y neurobiológicos).
 
- \ Ventajas: 
+ Ventajas: 
   - Captura relaciones no lineales complejas.
   - Buen manejo de variables mixtas.
   - Permite medir importancia de variables.
 
- \ Limitaciones: 
+ Limitaciones: 
   - Puede ser computacionalmente mas costoso de trabajar.
 
 Justificación: Es el modelo mas adecuadopara detectar patrones complejos entre uso de videojuegos, salud mental y ragos de TEA, que no necesariamente siguen relaciones lineales.
