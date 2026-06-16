@@ -1,4 +1,4 @@
-b# *Adicción a los Videojuegos en personas con TEA:* Factores desencadenantes, impacto funcional y repercusiones a largo plazo
+# *Adicción a los Videojuegos en personas con TEA:* Factores desencadenantes, impacto funcional y repercusiones a largo plazo
 
 ***Definición del problema*** \
 \
@@ -28,12 +28,12 @@ Modelo principal de clasificación. Permite manejar relaciones no lineales entre
 *K-Nearest Neighbors (KNN)* \
 Modelo basado en similitud entre observaciones. Permite identificar patrones de usuarios con comportamientos similares en términos de uso de videojuegos y rasgos asociados al TEA.
 
-***Justifiación de los Modelos*** \
+***Justificación de los Modelos*** \
 \
 El problema planteado busca analizar la relación entre el uso problemático de videojuegos y los rasgos asociados al Trastorno del Espectro Autista (TEA), integrando además variables conductuales y de salud mental. Dado que el objetivo principal es clasificar perfiles de riesgo de uso problemático de videojuegos y comprender qué variables influyen en este comportamiento.
 
 *Random Forest* \
-Pertinencia: Es el modelo mas adecuado para el problema, ya que permite manejar múltiples variables muy disntintas entre si, provenientes de los disntintos datasets (Conductuales, psicológicos y neurobiológicos).
+Pertinencia: Es el modelo más adecuado para el problema, ya que permite manejar múltiples variables muy disntintas entre si, provenientes de los distintos datasets (Conductuales, psicológicos y neurobiológicos).
 
  Ventajas: 
   - Captura relaciones no lineales complejas.
@@ -41,12 +41,12 @@ Pertinencia: Es el modelo mas adecuado para el problema, ya que permite manejar 
   - Permite medir importancia de variables.
 
  Limitaciones: 
-  - Puede ser computacionalmente mas costoso de trabajar.
+  - Puede ser computacionalmente más costoso de trabajar.
 
-Justificación: Es el modelo mas adecuadopara detectar patrones complejos entre uso de videojuegos, salud mental y ragos de TEA, que no necesariamente siguen relaciones lineales.
+Justificación: Es el modelo más adecuado para detectar patrones complejos entre uso de videojuegos, salud mental y rasgos de TEA, que no necesariamente siguen relaciones lineales.
 
 *K-Nearest Neighbors (KNN)* \
-Pertinencia: Permite identificar usuarios con comportamiento similares en términos de gaming y características psicológicas/neurobiológicas.
+Pertinencia: Permite identificar usuarios con comportamientos similares en términos de gaming y características psicológicas/neurobiológicas.
 
   Ventajas:
   - Simple y facil de interpretar conceptualmente.
