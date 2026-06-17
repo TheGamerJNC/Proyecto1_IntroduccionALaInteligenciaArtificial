@@ -1,4 +1,4 @@
- # *Adicción a los Videojuegos en personas con TEA:* Factores desencadenantes, impacto funcional y repercusiones a largo plazo
+ # *Análisis del impacto del uso de videojuegos en el bienestar psicológico.
 
 ***Definición del problema*** \
 \
