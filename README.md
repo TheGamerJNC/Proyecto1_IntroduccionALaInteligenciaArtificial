@@ -2,48 +2,40 @@
 
 ***Definición del problema*** \
 \
-El uso de videojuegos se ha incrementado significativamente en los últimos años, especialmente en población joven, generando en algunos casos patrones de uso problemático o adictivo. Diversos estudios sugieren que ciertos grupos neurodivergentes, como las personas dentro del Trastorno del Espectro Autista (TEA), podrían presentar una relación distinta con este tipo de estímulos digitales, debido a características como la preferencia por rutinas, intereses restringidos y alta focalización en actividades específicas.
+El uso de videojuegos ha aumentado significativamente en los últimos años, convirtiéndose en una de las principales formas de entretenimiento digital. Sin embargo, un uso excesivo puede estar asociado a efectos negativos sobre la salud mental, incluyendo mayores niveles de ansiedad, estrés, depresión y dificultades en el bienestar general. Comprender qué factores del comportamiento de juego se relacionan con estos efectos resulta relevante para identificar perfiles de riesgo y promover hábitos de uso más saludables.
 
-Sin embargo, aún no existe claridad sobre si estas características se asocian a una mayor severidad del uso problemático de videojuegos o si simplemente reflejan formas distintas de interacción con el entorno digital. Esto genera una brecha en la comprensión del fenómeno, especialmente en la identificación de factores conductuales y neurobiológicos que podrían influir en el desarrollo de patrones de uso excesivo.
-
-***Datasets: Descripción y Fuente*** \
+***Dataset: Descripción y Fuente*** \
 \
-*Gaming Addiction Dataset (https://www.kaggle.com/datasets/ajitashwath/gaming-addiction-dataset)* \
-Este dataset contiene información relacionada con hábitos de uso de videojuegos y posibles indicadores de adicción. Incluye variables como horas de juego, control del comportamiento, impacto emocional del gaming y señales de uso problemático. Su objetivo principal es permitir la identificación de patrones conductuales asociados al uso excesivo de videojuegos.
-
-*Survey on Video Game Addiction and Academic Performance (https://www.kaggle.com/datasets/laujinxi/survey-on-video-game-addiction-and-academic)* \
-Dataset basado en encuestas que recopila información sobre hábitos de videojuegos, características personales y variables de contexto del usuario. Incluye indicadores conductuales y de estilo de vida que permiten analizar el uso de videojuegos desde una perspectiva social y conductual, aportando información relevante sobre patrones de adicción.
-
 *Gaming and Mental Health Dataset (https://www.kaggle.com/datasets/shaistashahid/gaming-and-mental-health)* \
 Este dataset se centra en la relación entre el uso de videojuegos y la salud mental. Contiene variables relacionadas con bienestar psicológico, niveles de estrés, ansiedad, estado de ánimo y hábitos de juego. Permite analizar cómo el gaming se asocia con diferentes indicadores de salud mental, aportando una dimensión clínica y psicológica al análisis del comportamiento adictivo.
-
-*Autism Spectrum Disorder Clasification (https://www.kaggle.com/competitions/abide)* \
-El objetivo del presente estudio fue aplicar algoritmos de aprendizaje profundo para identificar a pacientes con trastorno del espectro autista (TEA) a partir de un gran conjunto de datos de imágenes cerebrales, basándose únicamente en los patrones de activación cerebral de los pacientes. Investigamos datos de neuroimagen de pacientes con TEA de una base de datos mundial multisitio conocida como ABIDE (Intercambio de Datos de Imagen Cerebral Autista). El TEA es un trastorno cerebral caracterizado por déficits sociales y conductas repetitivas.
 
 ***Modelos seleccionados*** \
 \
 *Random Forest* \
 Modelo principal de clasificación. Permite manejar relaciones no lineales entre variables, trabajar con datos mixtos y obtener la importancia de cada variable en la predicción.
 
+*Regresión Logística* \
+Es un modelo de clasificación que estima la probabilidad  de que una observación pertenezca a una determinada categoría. Es ampliamente utilizada para problemas de clasificación binaria. 
+
 *K-Nearest Neighbors (KNN)* \
-Modelo basado en similitud entre observaciones. Permite identificar patrones de usuarios con comportamientos similares en términos de uso de videojuegos y rasgos asociados al TEA.
+Es un algoritmo de clasifiación que asgina una categoría a una observación según las clases de sus vecinos cercanos en el conunto de datos. Su funcionamiento se basa en las simulitudes entre las caracteristicas de los individuos. 
 
 ***Justificación de los Modelos*** \
 \
-El problema planteado busca analizar la relación entre el uso problemático de videojuegos y los rasgos asociados al Trastorno del Espectro Autista (TEA), integrando además variables conductuales y de salud mental. Dado que el objetivo principal es clasificar perfiles de riesgo de uso problemático de videojuegos y comprender qué variables influyen en este comportamiento.
+El problema planteado busca analizar la relación entre el uso problemático de videojuegos y el riesgio de daño hacia la salud mental. 
 
 *Random Forest* \
-Pertinencia: Es el modelo más adecuado para el problema, ya que permite manejar múltiples variables muy disntintas entre si, provenientes de los distintos datasets (Conductuales, psicológicos y neurobiológicos).
+Pertinencia: es pertinente para este proyecto porque la relación entre los hábitos de juego y la salud mental puede depender de múltiples variables que interactúan entre sí, como las horas de juego, la edad, el género y la experiencia en videojuegos. Este modelo permite capturar relaciones complejas sin necesidad de asumir una estructura lineal de los datos.
 
  Ventajas: 
-  - Captura relaciones no lineales complejas.
+  - Maneja variables numéricas y categóricass.
   - Buen manejo de variables mixtas.
   - Permite medir importancia de variables.
 
  Limitaciones: 
   - Puede ser computacionalmente más costoso de trabajar.
 
-Justificación: Es el modelo más adecuado para detectar patrones complejos entre uso de videojuegos, salud mental y rasgos de TEA, que no necesariamente siguen relaciones lineales.
+Justificación: Se selecciona como modelo principal debido a su capacidad para trabajar con variables numéricas y categóricas simultáneamente, manejar grandes volúmenes de información y reducir el riesgo de sobreajuste mediante la combinación de múltiples árboles de decisión.
 
 *K-Nearest Neighbors (KNN)* \
 Pertinencia: Permite identificar usuarios con comportamientos similares en términos de gaming y características psicológicas/neurobiológicas.
