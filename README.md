@@ -50,7 +50,7 @@ Pertinencia: Es adecuada para este proyecto cuando el objetivo es clasificar a l
 Justificación: Se utiliza como modelo de referencia debido a su simplicidad e interpretabilidad. Sus resultados permiten comprender cómo cada variable influye en la probabilidad de presentar problemas de salud mental asociados a los hábitos de juego.
 
 *K-Nearest Neighbors (KNN)* \
-Pertinencia: Permite identificar usuarios con comportamientos similares en términos de gaming y características psicológicas/neurobiológicas.
+Pertinencia: Resulta pertinente porque clasifica a los individuos según su similitud con otros jugadores presentes en el conjunto de datos. Esto permite identificar perfiles con características de juego y salud mental similares, facilitando la detección de grupos de riesgo.
 
   Ventajas:
   - Simple y facil de interpretar conceptualmente.
@@ -60,17 +60,17 @@ Pertinencia: Permite identificar usuarios con comportamientos similares en térm
   - Alto costo computacional en grandes datasets.
   - Rendimiento depende fuertemente de la elección de K.
 
-Justificación: Es útil para explorar similitudes entre perfiles de usuarios, especialmente entre individuos con rasgos TEA y los que no presentan TEA.
+Justificación: El modelo permite analizar cómo jugadores con hábitos similares pueden presentar niveles parecidos de afectación en su salud mental. Además, proporciona una perspectiva complementaria a los modelos basados en reglas o probabilidades, enriqueciendo el análisis comparativo del proyecto.
 
 ***Métricas Seleccionadas (y su Justificación)*** \
 \
 *Precision*
 - Lo que mide: El porcentaje de personas identificadas con adicción que realmente la padecen.
-- El por que es útil: Un falso positivo (clasificar erróneamente a alguien como adicto) puede generar alarmismo innecesario en las familias, estigmatizar el uso de los videojuegos (que a menudo son una vía legítima de socialización y descompresión para personas TEA) o activar intervenciones clínicas invasivas e injustificadas.
+- El por que es útil: Un falso positivo (no etiquetar incorrectamente a alguien como en riesgo). Importante porque evita diagnósticos erróneos. 
 
 *Recall*
 - Lo que mide: El porcentaje de personas con adicción real que el modelo logra detectar.
-- El por que es útil: En el contexto de la salud mental y el TEA, un falso negativo (no detectar a alguien que sufre adicción) significa dejar a una persona vulnerable sin intervención, apoyo terapéutico o adaptaciones. Es crucial mantener este valor alto si el objetivo es el tamizaje (screening).
+- El por que es útil: Permite identificar personas que realmente pueden tener afectación en salud mental. 
 
 *F1-Score*
 - Lo que mide: La media armónica entre "Precision" y "Recall".
@@ -78,4 +78,4 @@ Justificación: Es útil para explorar similitudes entre perfiles de usuarios, e
 
 *AUC-ROC (Área debajo de la curva ROC)*
 - Lo que mide: La capacidad del modelo para distinguir entre ambas clases a través de diferentes umbrales de decisión.
-- El por que es útil: Permite a los investigadores y clínicos ajustar el "umbral" del modelo según la estrategia. Por ejemplo, se puede bajar el umbral para ser más sensibles en una etapa de diagnóstico temprano, o subirlo para intervenciones costosas.
+- El por que es útil: Permite evaluar que tan bien el modelo separa jugadores con y sin riesgo. Es muy útil cuando las clases no están equilibradas. 
