@@ -75,9 +75,3 @@ Justificación: Es útil para explorar similitudes entre perfiles de usuarios, e
 *AUC-ROC (Área debajo de la curva ROC)*
 - Lo que mide: La capacidad del modelo para distinguir entre ambas clases a través de diferentes umbrales de decisión.
 - El por que es útil: Permite a los investigadores y clínicos ajustar el "umbral" del modelo según la estrategia. Por ejemplo, se puede bajar el umbral para ser más sensibles en una etapa de diagnóstico temprano, o subirlo para intervenciones costosas.
-
-***Análisi de los modelos según las métricas de desempeño*** \
-\
-Para evaluar la capacidad de los modelos para identificar perfiles con riesgo de uso problemático de videojuegos en personas con TEA, se utilizarán las métricas Precision, Recall, F1-Score y AUC-ROC, ya que el problema corresponde a una tarea de clasificación binaria y puede presentar desbalance entre clases.
-
-*Random Forest*
