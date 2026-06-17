@@ -1,4 +1,4 @@
- # *Análisis del impacto del uso de videojuegos en el bienestar psicológico.
+ # Análisis del impacto del uso de videojuegos en el bienestar psicológico.
 
 ***Definición del problema*** \
 \
