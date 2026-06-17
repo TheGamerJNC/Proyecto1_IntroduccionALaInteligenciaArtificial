@@ -1,4 +1,4 @@
-# *Adicción a los Videojuegos en personas con TEA:* Factores desencadenantes, impacto funcional y repercusiones a largo plazo
+ # *Adicción a los Videojuegos en personas con TEA:* Factores desencadenantes, impacto funcional y repercusiones a largo plazo
 
 ***Definición del problema*** \
 \
@@ -25,7 +25,7 @@ Es un algoritmo de clasifiación que asgina una categoría a una observación se
 El problema planteado busca analizar la relación entre el uso problemático de videojuegos y el riesgio de daño hacia la salud mental. 
 
 *Random Forest* \
-Pertinencia: es pertinente para este proyecto porque la relación entre los hábitos de juego y la salud mental puede depender de múltiples variables que interactúan entre sí, como las horas de juego, la edad, el género y la experiencia en videojuegos. Este modelo permite capturar relaciones complejas sin necesidad de asumir una estructura lineal de los datos.
+Pertinencia: Es pertinente para este proyecto porque la relación entre los hábitos de juego y la salud mental puede depender de múltiples variables que interactúan entre sí, como las horas de juego, la edad, el género y la experiencia en videojuegos. Este modelo permite capturar relaciones complejas sin necesidad de asumir una estructura lineal de los datos.
 
  Ventajas: 
   - Maneja variables numéricas y categóricass.
@@ -36,6 +36,18 @@ Pertinencia: es pertinente para este proyecto porque la relación entre los háb
   - Puede ser computacionalmente más costoso de trabajar.
 
 Justificación: Se selecciona como modelo principal debido a su capacidad para trabajar con variables numéricas y categóricas simultáneamente, manejar grandes volúmenes de información y reducir el riesgo de sobreajuste mediante la combinación de múltiples árboles de decisión.
+
+*Regresión Logística* \
+Pertinencia: Es adecuada para este proyecto cuando el objetivo es clasificar a los jugadores en categorías de riesgo, por ejemplo, riesgo alto o bajo de afectación de la salud mental. Permite modelar la probabilidad de pertenecer a una determinada clase en función de las características observadas.
+
+ Ventajas: 
+  - Permite comprender fácilmente cómo cada variable influye en la predicción.
+  - Esta diseñada para predecir la probabilidad de que una variable pertanezca a una clase. 
+
+ Limitaciones: 
+  - Puede perder precisión si el fenónmeno es complejo.
+
+Justificación: Se utiliza como modelo de referencia debido a su simplicidad e interpretabilidad. Sus resultados permiten comprender cómo cada variable influye en la probabilidad de presentar problemas de salud mental asociados a los hábitos de juego.
 
 *K-Nearest Neighbors (KNN)* \
 Pertinencia: Permite identificar usuarios con comportamientos similares en términos de gaming y características psicológicas/neurobiológicas.
