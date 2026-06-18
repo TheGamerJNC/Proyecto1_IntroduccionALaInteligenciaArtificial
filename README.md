@@ -75,7 +75,3 @@ Justificación: El modelo permite analizar cómo jugadores con hábitos similare
 *F1-Score*
 - Lo que mide: La media armónica entre "Precision" y "Recall".
 - El por que es útil: Los datos sobre adicción en poblaciones específicas suelen estar muy desbalanceados (la mayoría de la muestra no cumplirá con los criterios clínicos de adicción). El F1-Score es la mejor métrica general para evaluar el rendimiento del modelo sin dejarse engañar por una alta precisión a costa de un recall bajo, o viceversa.
-
-*AUC-ROC (Área debajo de la curva ROC)*
-- Lo que mide: La capacidad del modelo para distinguir entre ambas clases a través de diferentes umbrales de decisión.
-- El por que es útil: Permite evaluar que tan bien el modelo separa jugadores con y sin riesgo. Es muy útil cuando las clases no están equilibradas. 
