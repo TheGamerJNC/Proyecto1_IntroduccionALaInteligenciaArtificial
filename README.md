@@ -1,5 +1,9 @@
  # Análisis del impacto del uso de videojuegos en el bienestar psicológico.
 
+***Pregunta del problema*** 
+
+¿Es posible predecir el impacto negativo en la salud mental asociado al uso excesivo de videojuegos a partir de variables de hábitos de juego?
+
 ***Definición del problema*** \
 \
 El uso de videojuegos ha aumentado significativamente en los últimos años, convirtiéndose en una de las principales formas de entretenimiento digital. Sin embargo, un uso excesivo puede estar asociado a efectos negativos sobre la salud mental, incluyendo mayores niveles de ansiedad, estrés, depresión y dificultades en el bienestar general. Comprender qué factores del comportamiento de juego se relacionan con estos efectos resulta relevante para identificar perfiles de riesgo y promover hábitos de uso más saludables.
@@ -193,3 +197,11 @@ En cuanto a las matrices de confusión de cada método, podemos destacar dos asp
 <li>Si vemos la matriz de confusión de la _Regresión Logística_, podemos notar que es la que posee la menor cantidad de clasificaciones erróneas (era de esperarse debido a ser también la que posee el mayor valor de "Accuracy" con un valor de 0.95) con un total de 14. Debido a esto, este es el modelo que nos entrega los resultados más confiables de los tres.</li>
 <li>Hablando ahora del _Random Forest_, vemos que su matriz de confusión es el punto medio de los tres modelos. Este nos entrega una seguridad elevada de sus cálculos, con un total de 18 clasificaciones erróneas. Y, al tener un valor de "Accuracy" menor que la _Regresión Logística_, se infiere que (tal como esperamos) su rendimiento y capacidad de predicción se ve opacada por el anterior.</li>
 </ol>
+
+***Conclusión*** \
+\
+El presente proyecto tuvo como objetivo analizar si es posible predecir el impacto negatvo en la salud mental asociado al uso de videojuegos a partir de variables relacionadas con los hábitos de juego, utilizando modelos como Regresión Logística, Random Forest y K.Nearest Neighbors. A partir de los resultados obtenidos, se puede concluir que la hipótesis del estudio se cumple, ya que los modelos implementados fueron capaces de predecir con un alto nivel de desempeño el riesgo de afectación en la salud mental de los jugadores. En particular, tanto el modelo Regresion Logística y Random Forest mostraron valores elevados de Precisión, Recall y F1-Score, además de una buena capacidad discriminativa según las matrices de confusión. Por otro lado, el modelo K.Nearest Neighbors presentó un desempeño inferior en comparación a los demas modelos, lo que sugiere que la problematica no se explica únicamente mediante similitud entre casos, sino que requiere modelos capaces de capturar relaciones más complejas entre las variables. 
+
+Por otro lado. los resultados permiten identificar variables como las horas diarias de juego, la pérdida de interés en otras actividades, el aislamieno social y la calidad de sueño los cuales son factores determinantes para la predicción del riesgo, lo que confirma que el impacto del uso de videojuegos no depende de un único factor, sino de la combinación de múltiples variables conductuales y psicológicas.
+
+En conclusión, el estudio demuestra que sí es posible predecir el impacto negativo en la salud mental asociado al uso de videojuegos mediante modelos de machine learning, validando la pregunta a la investigación de dicho proyecto. Se puede agregar que, los resultados obtenidos evidencian que el uso excesivo de videojuegos, junto con ciertos patrones de comportamiento, se asocia significativamente a una mayor probabilidad de afectación en la saludo mental de los jugadores. 
