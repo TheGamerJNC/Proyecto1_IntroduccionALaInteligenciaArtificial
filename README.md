@@ -75,3 +75,121 @@ Justificación: El modelo permite analizar cómo jugadores con hábitos similare
 *F1-Score*
 - Lo que mide: La media armónica entre "Precision" y "Recall".
 - El por que es útil: Los datos sobre adicción en poblaciones específicas suelen estar muy desbalanceados (la mayoría de la muestra no cumplirá con los criterios clínicos de adicción). El F1-Score es la mejor métrica general para evaluar el rendimiento del modelo sin dejarse engañar por una alta precisión a costa de un recall bajo, o viceversa.
+
+***Resultados*** \
+\
+*Comparación de Modelos (Métricas)* \
+**Tabla**
+<table>
+	<tr>
+		<th>Modelo</th>
+		<th>Clase</th>
+		<th>Accuracy</th>
+		<th>Precision</th>
+		<th>Recall</th>
+		<th>F1-Score</th>
+	</tr>
+	<tr>
+		<td rowspan="4">Regresión Logística</td>
+		<td>0</td>
+		<td rowspan="4">0.95</td>
+		<td>0.87</td>
+		<td>0.87</td>
+		<td>0.87</td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>1.00</td>
+		<td>1.00</td>
+		<td>1.00</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>0.88</td>
+		<td>1.00</td>
+		<td>0.93</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1.00</td>
+		<td>0.86</td>
+		<td>0.92</td>
+	</tr>
+	<tr>
+		<td rowspan="4">Random Forest</td>
+		<td>0</td>
+		<td rowspan="4">0.94</td>
+		<td>0.86</td>
+		<td>0.81</td>
+		<td>0.83</td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>1.00</td>
+		<td>0.99</td>
+		<td>1.00</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>0.84</td>
+		<td>0.94</td>
+		<td>0.89</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>0.96</td>
+		<td>0.92</td>
+		<td>0.94</td>
+	</tr>
+	<tr>
+		<td rowspan="4">K-Nearest Neighbors (KNN)</td>
+		<td>0</td>
+		<td rowspan="4">0.82</td>
+		<td>0.63</td>
+		<td>0.71</td>
+		<td>0.67</td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>0.90</td>
+		<td>0.99</td>
+		<td>0.94</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>0.67</td>
+		<td>0.56</td>
+		<td>0.61</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>0.94</td>
+		<td>0.68</td>
+		<td>0.79</td>
+	</tr>
+</table>
+
+**Observaciones**
+
+<ol start=1>
+<li>El alto rendimiento de la Regresión Logística (el alto valor de "Accuracy") sugiere que existe una relación fuertemente lineal y directa entre las características evaluadas (como las horas de juego o los niveles de ansiedad) y la clasificación del riesgo. Esto nos demuestra que las clases de adicción en este dataset no requieren de transformaciones complejas para ser identificadas con alta precisión.</li>
+<li>Aunque "Random Forest" es un modelo robusto frente al sobreajuste (y también subajuste), su rendimiento comparativo nos indica que la complejidad adicional no era estrictamente necesaria para la estructura de este dataset. Sin embargo su principal aporte radica en la ayuda que nos aportó al permitirnos extraer la "importancia de las variables", confirmando numéricamente cuáles de los factores de los hábitos de juego pesan más al momento de tratar de predecir el riesgo.</li>
+<li>Como se puede notar, el modelo "K-Nearest Neighbors" presentó un rendimiento mucho menor que los dos modelos anteriores, lo cual debido al concepto de la "Maldición de la Dimensionalidad" visto en clases es de esperarse. Al ser un algoritmo basado en la distancia (euclidiana, por ejemplo) entre puntos de los datos, la presencia de múltiples variables en el dataset en cuestión puede atenuar (o disminuir) la proximidad real entre los usuarios con perfiles psicológicos similares, haciéndolo más sensible al ruido en comparación con los otros modelos usados previamente.</li>
+</ol>
+
+*Importancia de las Características* \
+En cuanto a la importancia de las características del modelo de "Random Forest", podemos hablar de los tres factores que generan un mayor impacto en el riesgo de adicción.
+
+<ol start=1>
+<li> <b>daily_gaming_hours</b>: Representa la cantidad total de horas jugadas por día del jugador/a. Es de esperarse que esta sea la característica con mayor impacto en el riesgo de adicción, ya que entre más tiempo juega una persona, aumenta cada vez más el riesgo de padecer esta adicción.</li>
+<li> <b>loss_of_other_interests</b>: Representa de forma binaria (True = SI, False = NO) la pérdida de otros intereses de los jugadores/as. Que éste sea la segunda característica con más peso, nos dice que la mayoría de los usuarios que pierden interés en todo lo que no sea videojuegos representa un claro síntoma o factor de riesgo de una posible adicción.</li>
+<li> <b>withdrawal_symptoms</b>: Identifica a los/as usuarios que padecen síntomas de abstinencia luego de dejar de jugar por lapsos prolongados. Y, el simple hecho de que esté ubicada como la tercera característica más relevante, nos entrega la idea de que, a pesar que solo el 29% de los jugadores/as de los datos posee síndrome de abstinencia, éste dato es uno de los más importantes a la hora de diagnosticar esta adicción.</li>
+</ol>
+
+*Análisis de las Matrices de Confusión* \
+En cuanto a las matrices de confusión de cada método, podemos destacar dos aspectos particulares a notar (sin contar la matriz de confusión de _K-Nearest Neighbors_, debido a que es la que posee la mayor tasa de errores de clasificación).
+
+<ol start=1>
+<li>Si vemos la matriz de confusión de la _Regresión Logística_, podemos notar que es la que posee la menor cantidad de clasificaciones erróneas (era de esperarse debido a ser también la que posee el mayor valor de "Accuracy" con un valor de 0.95) con un total de 14. Debido a esto, este es el modelo que nos entrega los resultados más confiables de los tres.</li>
+<li>Hablando ahora del _Random Forest_, vemos que su matriz de confusión es el punto medio de los tres modelos. Este nos entrega una seguridad elevada de sus cálculos, con un total de 18 clasificaciones erróneas. Y, al tener un valor de "Accuracy" menor que la _Regresión Logística_, se infiere que (tal como esperamos) su rendimiento y capacidad de predicción se ve opacada por el anterior.</li>
+</ol>
